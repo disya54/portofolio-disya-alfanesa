@@ -3,173 +3,233 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portofolio Disya Al Fanesa</title>
+  <title>Portofolio - Disya Al Fanesa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
-    /* Reset */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Poppins', sans-serif;
     }
 
     body {
-      background: linear-gradient(135deg, #0a0a0a, #1a1a1a, #2a2a2a);
-      color: #f5f5f5;
+      background-color: #0d1117;
+      color: #ddd;
       line-height: 1.6;
+      overflow-x: hidden;
     }
 
     header {
-      background: linear-gradient(90deg, #ff007f, #ff4fa6, #ff85c1);
-      color: #fff;
       text-align: center;
-      padding: 3rem 1rem;
-      border-bottom-left-radius: 50px;
-      border-bottom-right-radius: 50px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+      padding: 60px 20px 30px;
     }
 
-    header h1 {
-      font-size: 2.5rem;
-      font-weight: bold;
+    .profile-img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 3px solid #4FC3F7;
+      margin-bottom: 20px;
+      object-fit: cover;
+      box-shadow: 0 0 20px rgba(79, 195, 247, 0.2);
     }
 
-    header p {
-      font-size: 1.2rem;
-      margin-top: 0.5rem;
-      opacity: 0.95;
+    h1 {
+      font-size: 28px;
+      color: #4FC3F7;
+    }
+
+    p.subtitle {
+      color: #aaa;
+      margin-top: 8px;
+      font-size: 15px;
     }
 
     section {
-      max-width: 900px;
-      margin: 2rem auto;
-      background: #111;
-      padding: 2rem;
-      border-radius: 20px;
-      box-shadow: 0 4px 25px rgba(255,0,127,0.15);
-      transition: transform 0.3s;
+      max-width: 750px;
+      background: #161b22;
+      margin: 30px auto;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     section:hover {
       transform: translateY(-4px);
+      box-shadow: 0 10px 30px rgba(79,195,247,0.1);
     }
 
     section h2 {
-      font-size: 1.6rem;
-      margin-bottom: 1rem;
-      color: #ff4fa6;
-      border-left: 6px solid #ff007f;
-      padding-left: 12px;
+      color: #4FC3F7;
+      font-size: 20px;
+      margin-bottom: 12px;
+      font-weight: 600;
     }
 
-    p, li {
-      font-size: 1rem;
-      color: #ddd;
+    section p {
+      color: #ccc;
+      font-size: 15px;
+      text-align: justify;
     }
 
-    ul {
-      list-style: none;
-      margin-top: 0.5rem;
+    .skills-list {
+      display: flex;
+      flex-direction: column; 
+      align-items: center; 
+      gap: 10px;
+      margin-top: 15px;
     }
 
-    ul li {
-      margin-bottom: 8px;
-      padding-left: 18px;
-      position: relative;
+    .skill-item {
+      background: #0d1117;
+      padding: 10px 15px;
+      border-radius: 8px;
+      color: #fff;
+      text-align: center;
+      font-weight: 500;
+      border: 1px solid #1f2937;
+      width: 80%;
     }
 
-    ul li::before {
-      content: "➤";
-      color: #ff4fa6;
-      position: absolute;
-      left: 0;
+    .skill-item:hover {
+      background: #1e2a36;
     }
 
-    .kontak a {
+    .project-btn {
       display: inline-block;
-      margin-right: 15px;
+      margin-top: 15px;
+      background: #4FC3F7;
+      color: #000;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-weight: 600;
       text-decoration: none;
-      color: #ff85c1;
-      font-weight: bold;
-      transition: 0.3s;
+      transition: background 0.3s;
     }
 
-    .kontak a:hover {
-      color: #ff007f;
+    .project-btn:hover {
+      background: #5fd0ff;
+    }
+
+    /* --- Bagian Form Kontak yang baru --- */
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      background: #000; /* hitam */
+      color: #fff; /* teks putih */
+      border: 1px solid #1f2937;
+      padding: 10px;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .contact-form input[readonly] {
+      cursor: not-allowed;
+      opacity: 0.9;
+    }
+
+    .contact-form button {
+      background: #4FC3F7;
+      color: #000;
+      font-weight: 600;
+      border: none;
+      padding: 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+      width: 100%; /* satu baris penuh */
+    }
+
+    .contact-form button:hover {
+      background: #5fd0ff;
     }
 
     footer {
       text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-      background: linear-gradient(90deg, #ff007f, #ff4fa6, #ff85c1);
-      color: #fff;
-      font-weight: bold;
-      border-top-left-radius: 30px;
-      border-top-right-radius: 30px;
+      padding: 25px 10px;
+      font-size: 13px;
+      color: #aaa;
+      border-top: 1px solid #1f2937;
+      margin-top: 30px;
     }
 
-    /* Responsive */
+    footer span {
+      color: #4FC3F7;
+    }
+
     @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
       section {
-        margin: 1rem;
-        padding: 1.5rem;
+        margin: 20px 15px;
+        padding: 20px;
+      }
+      .skill-item {
+        flex: 1 1 45%;
       }
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>Portofolio Disya Al Fanesa</h1>
-    <p>Pelajar PPLG | Game Development Enthusiast | Calon Pro Player ML</p>
+    <img src="fotodisya1.jpg" alt="Foto Profil" class="profile-img">
+    <h1>Disya Al Fanesa</h1>
+    <p class="subtitle">Pelajar PPLG | Calon Game Developer | Gamer Mobile Legends 🎮</p>
   </header>
 
-  <section class="tentang">
-    <h2>👩‍💻 Tentang Saya</h2>
-    <p>Saya <strong>Disya Al Fanesa</strong>, seorang pelajar jurusan PPLG yang memiliki minat besar di dunia game development dan esports. Saya gemar ngulik engine game dan bermain Mobile Legends. Saya bercita-cita menjadi pro player Mobile Legends sambil membangun karier di dunia pemrograman.</p>
+  <section id="tentang">
+    <h2>Tentang Saya</h2>
+    <p>
+      Saya Disya Al Fanesa, seorang pelajar jurusan <b>PPLG</b> yang memiliki minat besar di dunia
+      <b>game development</b> dan <b>esports</b>. Saya gemar ngulik engine game dan bermain
+      <b>Mobile Legends</b>. Saya bercita-cita menjadi pro player Mobile Legends sambil membangun karier di dunia pemrograman.  </p>
   </section>
 
-  <section class="info">
-    <h2>📌 Informasi Diri</h2>
-    <p><b>Nama:</b> Disya Al Fanesa</p>
-    <p><b>TTL:</b> Bogor, 5 Juni 2010</p>
-    <p><b>Alamat:</b> Bogor, Dramaga, Kp. Cihideung Kramat RT1/RW2</p>
+  <section id="skill">
+    <h2>Skill Saya</h2>
+    <div class="skills-list">
+      <div class="skill-item">HTML</div>
+      <div class="skill-item">CSS</div>
+      <div class="skill-item">JavaScript</div>
+    </div>
   </section>
 
-  <section class="pendidikan">
-    <h2>🎓 Pendidikan</h2>
-    <ul>
-      <li>SD : SDN Purwasari 01</li>
-      <li>SMP : SMPN 2 Dramaga</li>
-      <li>SMK : SMKN 1 Ciomas</li>
-    </ul>
+  <section id="proyek">
+    <h2>Proyek Saya</h2>
+    <h2>Portofolio</h2>
+    <p>
+      Ini adalah proyek saya yaitu sebuah website portofolio pribadi saya yang saya buat dengan HTML, CSS dan JavaScript. Website ini berisi profil, skill, dan kontak saya dengan desain modern dan responsif.
+    </p>
+    <a href="#top" class="project-btn">Lihat Proyek</a>
   </section>
 
-  <section class="cita">
-    <h2>⭐ Cita-cita</h2>
-    <p>Saya bercita-cita menjadi <b>Pro Player Mobile Legends</b>.</p>
-  </section>
+  <section id="kontak" class="contact">
+    <h2>Kontak Saya</h2>
+    <p>Email: 
+      <a href="mailto:disyad54@gmail.com" style="color:#4FC3F7;">disyad54@gmail.com</a>
+    </p>
+    <p>Instagram: 
+      <a href="https://www.instagram.com/cloudiee.syaa" target="_blank" style="color:#4FC3F7;">@cloudiee.syaa</a>
+    </p>
 
-  <section class="hobi">
-    <h2>🎮 Hobi</h2>
-    <ul>
-      <li>Belajar hal baru</li>
-      <li>Bermain bola basket</li>
-      <li>Bermain Mobile Legends</li>
-    </ul>
-  </section>
-
-  <section class="kontak">
-    <h2>📫 Kontak</h2>
-    <p>📧 Email : <a href="mailto:disyad54@gmail.com">disyad54@gmail.com</a></p>
-    <p>🖇️ GitHub : <a href="https://github.com/disya54" target="_blank">github.com/disya54</a></p>
+    <form class="contact-form">
+      <input type="text" value="Disya Al Fanesa" readonly>
+      <input type="email" value="disyad54@gmail.com" readonly>
+      <textarea placeholder="Pesan Anda..." required></textarea>
+      <button type="submit">Kirim</button>
+    </form>
   </section>
 
   <footer>
-    <p>© 2025 Disya Al Fanesa | Dibuat dengan ❤</p>
+    • 2025 Disya Al Fanesa pelajar PPLG 
   </footer>
+
 </body>
 </html>
