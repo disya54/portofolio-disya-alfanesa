@@ -29,15 +29,15 @@
       width: 130px;
       height: 130px;
       border-radius: 50%;
-      border: 3px solid #4FC3F7;
+      border: 3px solid #00FFFF;
       margin-bottom: 20px;
       object-fit: cover;
-      box-shadow: 0 0 20px rgba(79, 195, 247, 0.2);
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
     }
 
     h1 {
       font-size: 28px;
-      color: #4FC3F7;
+      color: #00FFFF;
     }
 
     p.subtitle {
@@ -58,14 +58,21 @@
 
     section:hover {
       transform: translateY(-4px);
-      box-shadow: 0 10px 30px rgba(79,195,247,0.1);
+      box-shadow: 0 10px 30px rgba(0,255,255,0.1);
     }
 
     section h2 {
-      color: #4FC3F7;
+      color: #00FFFF;
       font-size: 20px;
       margin-bottom: 12px;
       font-weight: 600;
+    }
+
+    section h3 {
+      color: #00FFFF;
+      font-size: 18px;
+      margin-bottom: 8px;
+      font-weight: 500;
     }
 
     section p {
@@ -100,7 +107,7 @@
     .project-btn {
       display: inline-block;
       margin-top: 15px;
-      background: #4FC3F7;
+      background: #00FFFF;
       color: #000;
       padding: 10px 18px;
       border-radius: 8px;
@@ -110,10 +117,10 @@
     }
 
     .project-btn:hover {
-      background: #5fd0ff;
+      background: #2EEEEE;
     }
 
-    /* --- Bagian Form Kontak yang baru --- */
+    /* --- Bagian Form Kontak --- */
     .contact-form {
       display: flex;
       flex-direction: column;
@@ -131,13 +138,13 @@
       font-size: 14px;
     }
 
-    .contact-form input[readonly] {
-      cursor: not-allowed;
-      opacity: 0.9;
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: #aaa;
     }
 
     .contact-form button {
-      background: #4FC3F7;
+      background: #00FFFF;
       color: #000;
       font-weight: 600;
       border: none;
@@ -149,7 +156,7 @@
     }
 
     .contact-form button:hover {
-      background: #5fd0ff;
+      background: #2EEEEE;
     }
 
     footer {
@@ -162,7 +169,7 @@
     }
 
     footer span {
-      color: #4FC3F7;
+      color: #00FFFF;
     }
 
     @media (max-width: 600px) {
@@ -179,7 +186,7 @@
 <body>
 
   <header>
-    <img src="fotodisya1.jpg" alt="Foto dari file saya" width="300">
+    <img src="GANTI-DENGAN-LINK-FOTO-KAMU.jpg" alt="Foto Profil" class="profile-img">
     <h1>Disya Al Fanesa</h1>
     <p class="subtitle">Pelajar PPLG | Calon Game Developer | Gamer Mobile Legends 🎮</p>
   </header>
@@ -189,11 +196,13 @@
     <p>
       Saya Disya Al Fanesa, seorang pelajar jurusan <b>PPLG</b> yang memiliki minat besar di dunia
       <b>game development</b> dan <b>esports</b>. Saya gemar ngulik engine game dan bermain
-      <b>Mobile Legends</b>. Saya bercita-cita menjadi pro player Mobile Legends sambil membangun karier di dunia pemrograman.  </p>
+      <b>Mobile Legends</b>. Saya bercita-cita menjadi pro player Mobile Legends sambil terus
+      belajar membuat game sendiri di masa depan.
+    </p>
   </section>
 
   <section id="skill">
-    <h2>Skill Saya</h2>
+    <h2>Skill Yang Saya Pahami</h2>
     <div class="skills-list">
       <div class="skill-item">HTML</div>
       <div class="skill-item">CSS</div>
@@ -203,7 +212,7 @@
 
   <section id="proyek">
     <h2>Proyek Saya</h2>
-    <h2>Portofolio</h2>
+      <h3>Portofolio</h3>
     <p>
       Ini adalah proyek saya yaitu sebuah website portofolio pribadi saya yang saya buat dengan HTML, CSS dan JavaScript. Website ini berisi profil, skill, dan kontak saya dengan desain modern dan responsif.
     </p>
@@ -213,22 +222,22 @@
   <section id="kontak" class="contact">
     <h2>Kontak Saya</h2>
     <p>Email: 
-      <a href="mailto:disyad54@gmail.com" style="color:#4FC3F7;">disyad54@gmail.com</a>
+      <a href="mailto:disyad54@gmail.com" style="color:#00FFFF;">disyad54@gmail.com</a>
     </p>
     <p>Instagram: 
-      <a href="https://www.instagram.com/cloudiee.syaa" target="_blank" style="color:#4FC3F7;">@cloudiee.syaa</a>
+      <a href="https://www.instagram.com/cloudiee.syaa" target="_blank" style="color:#00FFFF;">@cloudiee.syaa</a>
     </p>
 
     <form class="contact-form">
-      <input type="text" value="Disya Al Fanesa" readonly>
-      <input type="email" value="disyad54@gmail.com" readonly>
+      <input type="text" placeholder="Nama Anda...">
+      <input type="email" placeholder="Email Anda...">
       <textarea placeholder="Pesan Anda..." required></textarea>
       <button type="submit">Kirim</button>
     </form>
   </section>
 
   <footer>
-    • 2025 Disya Al Fanesa pelajar PPLG 
+    <span>• 2025 Disya Al Fanesa pelajar PPLG</span>
   </footer>
 
 </body>
